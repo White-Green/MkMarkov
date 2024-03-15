@@ -1,0 +1,29 @@
+[package]
+name = "mkmarkov"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bin]]
+name = "create"
+path = "src/create_markov_data.rs"
+
+[[bin]]
+name = "sim"
+path = "src/simulate_by_markov_chain.rs"
+
+[dependencies]
+lindera-core = "0.28.0"
+lindera-dictionary = "0.28.0"
+lindera-tokenizer = { version = "0.28.0", features = ["ipadic"] }
+indexmap = "2.2.5"
+once_cell = "1.19.0"
+regex = "1.10.3"
+tokenizer = { git = "https://github.com/White-Green/Yet-Another-Rust-Parser", rev = "9b833ae43d4d6c032d25de48c6077ed16e0c5b85" }
+tokenizer_generator = { git = "https://github.com/White-Green/Yet-Another-Rust-Parser", rev = "9b833ae43d4d6c032d25de48c6077ed16e0c5b85" }
+parser = { git = "https://github.com/White-Green/Yet-Another-Rust-Parser", rev = "9b833ae43d4d6c032d25de48c6077ed16e0c5b85" }
+parser_generator = { git = "https://github.com/White-Green/Yet-Another-Rust-Parser", rev = "9b833ae43d4d6c032d25de48c6077ed16e0c5b85" }
+serde = { version = "1.0.197", features = ["derive"] }
+serde_json = "1.0.114"
+rand = "0.8.5"
